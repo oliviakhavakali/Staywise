@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GuardMart"
+rootProject.name = "Staywise"
 include(":app")
+ 
