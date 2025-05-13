@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.olivia.staywise.R
+import com.olivia.staywise.navigation.ROUT_ADD_PRODUCT
 import com.olivia.staywise.navigation.ROUT_HOME
 import com.olivia.staywise.navigation.ROUT_REGISTER
 import com.olivia.staywise.viewmodel.AuthViewModel
@@ -66,7 +67,7 @@ fun LoginScreen(
                     navController.navigate(ROUT_HOME) {
                     }
                 } else {
-                    navController.navigate(ROUT_HOME) {
+                    navController.navigate(ROUT_ADD_PRODUCT) {
                     }
                 }
             }

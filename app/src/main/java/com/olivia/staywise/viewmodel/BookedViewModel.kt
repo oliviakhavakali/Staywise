@@ -13,9 +13,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
 class BookedViewModel(private val repository: BookedRepository) : ViewModel() {
-    var BookedUser: ((User?) -> Unit)? = null
-
-
     private val _selectedbooked = MutableStateFlow<Booked?>(null)
     val selectedContent: StateFlow<Booked?> = _selectedbooked.asStateFlow()
 

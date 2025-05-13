@@ -28,25 +28,27 @@ import com.olivia.staywise.ui.theme.Newblue
 import com.olivia.staywise.ui.theme.Newgreen
 
 data class SearchHotel(
-    val name: String,
-    val imageRes: Int,
-    val rating: Double,
-    val reviewers: Int,
-    val location: String
-)
 
+val name: String,
+val imageRes: Int,
+val rating: Double,
+val reviewers: Int,
+val location: String,
+val contact: String,
+val pricePerNight: String
+)
 val hotelSearchList = listOf(
-    SearchHotel("Serena Hotel", R.drawable.serena, 4.9, 1220, "Kenyatta Avenue, Nairobi"),
-    SearchHotel("The Tribe", R.drawable.t, 4.7, 980, "Limuru Rd, Nairobi"),
-    SearchHotel("ParkInn Hotel", R.drawable.pride, 4.2, 850, "Waiyaki Way, Nairobi"),
-    SearchHotel("Sankara Hotel", R.drawable.san, 4.8, 1325, "Parklands, Nairobi"),
-    SearchHotel("Sarova Stanley", R.drawable.saf, 4.6, 1130, "Kimathi Street, Nairobi"),
-    SearchHotel("Era Hotel", R.drawable.a, 4.9, 1023, "Mombasa Rd, Nairobi"),
-    SearchHotel("FairMont Hotel", R.drawable.fair, 4.5, 910, "Harry Thuku Rd, Nairobi"),
-    SearchHotel("Jacarada Hotel", R.drawable.jaca, 4.3, 700, "Woodvale Cl, Nairobi"),
-    SearchHotel("Lake Restore Hotel", R.drawable.rse, 4.4, 610, "Naivasha, Kenya"),
-    SearchHotel("WaterBuck Hotel", R.drawable.img, 4.6, 880, "Nakuru, Kenya"),
-    SearchHotel("Kempinski", R.drawable.kem, 5.0, 1450, "Chiromo Rd, Nairobi")
+    SearchHotel("Serena Hotel", R.drawable.serena, 4.9, 1220, "Kenyatta Avenue, Nairobi", "0700 123 456", "KES 12,000"),
+    SearchHotel("The Tribe", R.drawable.t, 4.7, 980, "Limuru Rd, Nairobi", "0711 456 789", "KES 10,500"),
+    SearchHotel("ParkInn Hotel", R.drawable.pride, 4.2, 850, "Waiyaki Way, Nairobi", "0722 789 123", "KES 9,000"),
+    SearchHotel("Sankara Hotel", R.drawable.san, 4.8, 1325, "Parklands, Nairobi", "0701 654 321", "KES 14,000"),
+    SearchHotel("Sarova Stanley", R.drawable.saf, 4.6, 1130, "Kimathi Street, Nairobi", "0733 222 333", "KES 11,800"),
+    SearchHotel("Era Hotel", R.drawable.a, 4.9, 1023, "Mombasa Rd, Nairobi", "0744 555 666", "KES 10,000"),
+    SearchHotel("FairMont Hotel", R.drawable.fair, 4.5, 910, "Harry Thuku Rd, Nairobi", "0755 111 222", "KES 13,000"),
+    SearchHotel("Jacarada Hotel", R.drawable.jaca, 4.3, 700, "Woodvale Cl, Nairobi", "0766 333 444", "KES 8,500"),
+    SearchHotel("Lake Restore Hotel", R.drawable.rse, 4.4, 610, "Naivasha, Kenya", "0777 777 888", "KES 7,500"),
+    SearchHotel("WaterBuck Hotel", R.drawable.img, 4.6, 880, "Nakuru, Kenya", "0788 999 000", "KES 9,200"),
+    SearchHotel("Kempinski", R.drawable.kem, 5.0, 1450, "Chiromo Rd, Nairobi", "0799 123 456", "KES 15,000")
 )
 
 @OptIn(ExperimentalMaterial3Api::class)

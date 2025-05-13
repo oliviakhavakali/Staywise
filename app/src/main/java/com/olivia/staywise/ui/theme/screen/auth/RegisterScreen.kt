@@ -90,13 +90,7 @@ fun RegisterScreen(
             }
 
         }
-        Card(
-            shape = RoundedCornerShape(12.dp),
-            modifier = Modifier
-                .fillMaxWidth().height(500.dp)
-            ,
-            elevation = CardDefaults.cardElevation(4.dp)
-        ) {
+
             //Username
             OutlinedTextField(
                 value = username,
@@ -267,5 +261,5 @@ fun RegisterScreen(
 
         }
     }
-}
+
 
