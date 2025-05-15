@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.olivia.staywise.model.User
+import com.olivia.staywise.model.Users
 import kotlin.jvm.java
 
-@Database(entities = [User::class], version = 2, exportSchema = false)
+@Database(entities = [Users::class], version = 2, exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao2
 
