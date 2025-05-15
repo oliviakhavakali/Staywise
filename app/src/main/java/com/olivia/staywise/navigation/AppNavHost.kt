@@ -16,7 +16,6 @@ import com.olivia.guardmart.ui.theme.screen.auth.LoginScreen
 import com.olivia.staywise.data.BookedDatabase
 import com.olivia.staywise.repository.UserRepository
 import com.olivia.staywise.data.UserDatabase
-import com.olivia.staywise.repository.BookedRepository
 import com.olivia.staywise.screens.splash.SplashScreen
 import com.olivia.staywise.ui.screens.products.AddProductScreen
 import com.olivia.staywise.ui.screens.products.EditProductScreen

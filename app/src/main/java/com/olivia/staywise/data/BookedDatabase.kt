@@ -1,34 +1,34 @@
 package com.olivia.staywise.data
 
-
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.olivia.staywise.model.Booked
-import com.olivia.staywise.model.User
 
-@Database(entities = [Booked::class, User::class], version = 3, exportSchema = false)
-abstract class BookedDatabase : RoomDatabase() {
 
-    abstract fun bookedDao(): BookedDao
+@Database(entities = [Booked::class], version = 2, exportSchema = false)
+abstract class BookedDatabase: RoomDatabase() {
+    abstract fun BookedDao(): BookedDao
 
     companion object {
         @Volatile
-        private var INSTANCE: BookedDatabase? = null
+        private var INSTANCE: com.olivia.staywise.data.BookedDatabase? = null
 
-        fun getDatabase(context: Context): BookedDatabase {
+        fun getDatabase(context: Context): com.olivia.staywise.data.BookedDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    BookedDatabase::class.java,
+                    com.olivia.staywise.data.BookedDatabase::class.java,
                     "booked_database"
                 )
-                    .fallbackToDestructiveMigration() // Optional: helpful during development
+                    .fallbackToDestructiveMigration() // DANGEROUS IN PRODUCTION, OK FOR NOW
                     .build()
                 INSTANCE = instance
                 instance
+
             }
         }
     }
+
 }

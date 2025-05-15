@@ -1,13 +1,11 @@
 package com.olivia.staywise.repository
 
-import android.content.Context
-import com.olivia.staywise.data.BookedDatabase
+import com.olivia.staywise.data.BookedDao
 import com.olivia.staywise.model.Booked
 
-class BookedRepository(context: Context) {
-    private val bookedDao = BookedDatabase.getDatabase(context).bookedDao()
 
-    suspend fun insert(booked: Booked) {
-        bookedDao.insertBooked(booked)
+class BookedRepository(private val bookedDao: BookedDao){
+    suspend fun enterbookings(booked: Booked){
+        bookedDao.enterbooking(booked)
     }
 }
