@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -28,6 +29,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.olivia.staywise.R
 import com.olivia.staywise.navigation.ROUT_HOME
+import com.olivia.staywise.navigation.ROUT_ROOMDETAILS
 import com.olivia.staywise.navigation.ROUT_SEARCH
 import com.olivia.staywise.ui.theme.Newgreen
 
@@ -236,12 +238,12 @@ fun HotelCard(hotel: Hotel) {
                         )
 
                         NavigationBarItem(
-                            icon = { Icon(Icons.Default.AccountBox, contentDescription = "profile") },
-                            label = { Text("Call") },
+                            icon = { Icon(Icons.Default.Star, contentDescription = "profile") },
+                            label = { Text("Room details") },
                             selected = selectedIndex == 2,
                             onClick = {
                                 selectedIndex = 2
-                                // Navigate or perform call action
+                                navController.navigate(ROUT_ROOMDETAILS)
                             }
                         )
                     }

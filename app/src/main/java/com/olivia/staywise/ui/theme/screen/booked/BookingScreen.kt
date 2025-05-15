@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.olivia.staywise.navigation.ROUT_HOME
 import java.util.*
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -115,7 +116,7 @@ fun BookingScreen(navController: NavController) {
 
                     Button(
                         onClick = {
-
+                             navController.navigate(ROUT_HOME)
                         },
                         modifier = Modifier.fillMaxWidth()
                     ) {

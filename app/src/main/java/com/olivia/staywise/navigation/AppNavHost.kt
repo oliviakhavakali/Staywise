@@ -24,7 +24,6 @@ import com.olivia.staywise.ui.screens.products.ProductListScreen
 import com.olivia.staywise.ui.theme.screen.auth.RegisterScreen
 import com.olivia.staywise.ui.theme.screen.booked.BookingScreen
 import com.olivia.staywise.ui.theme.screen.dashboard.DashboardScreen
-import com.olivia.staywise.ui.theme.screen.profile.ProfileScreen
 import com.olivia.staywise.ui.theme.screen.roomdetails.RoomdetailsScreen
 import com.olivia.staywise.ui.theme.screen.search.SearchScreen
 import com.olivia.staywise.viewmodel.AuthViewModel
@@ -62,7 +61,6 @@ fun AppNavHost(
         composable(ROUT_SPLASH) { SplashScreen(navController) }
         composable(ROUT_BOOKING) { BookingScreen(navController) }
         composable(ROUT_ROOMDETAILS) { RoomdetailsScreen(navController) }
-        composable(ROUT_PROFILE) { ProfileScreen(navController) }
 
         composable(ROUT_REGISTER) {
             RegisterScreen(authViewModel, navController) {
